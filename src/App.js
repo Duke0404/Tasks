@@ -7,7 +7,7 @@ import Tasks from "./components/Tasks";
 
 function App() {
   const [inputText, setInputText] = useState("");
-  const [todos, setTodos] = useState([]);
+  const [tasks, setTasks] = useState([]);
 
   return (
     <div className="App">
@@ -15,8 +15,8 @@ function App() {
             <h1>ToDo</h1>
         </header>
 
-        <Input todos={todos} setTodos={setTodos} inputText={inputText} setInputText={setInputText} />
-        <Tasks />
+        <Input tasks={tasks} setTasks={setTasks} inputText={inputText} setInputText={setInputText} />
+        <Tasks tasks={tasks} setTasks={setTasks} />
     </div>
   );
 }
