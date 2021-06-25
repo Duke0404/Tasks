@@ -7,7 +7,7 @@ const Item = ({item, text, tasks, setTasks}) => {
 
     const completeHandler = () => {
         setTasks(tasks.map((el) => {
-            if(el => el.id === item.id)
+            if(el.id === item.id)
                 return {...el, completed: !item.completed};
 
             return el;
@@ -15,22 +15,23 @@ const Item = ({item, text, tasks, setTasks}) => {
     }
 
     return (
-        <div className="todo">
+        <div className = "todo">
             <li
-                className={'todo-item ${item.completed ? "completed" : ""}'}
+                className = {`todo-item ${item.completed ? "completed" : ""}`}
             >{text}</li>
 
             <button
-                onClick={completeHandler}
-                className="complete-btn"
+                onClick = {completeHandler}
+                className = "complete-btn"
             >
-                <i className="fas fa-check" />
+                <i className = "fas fa-check" />
             </button>
 
             <button
-                onClick={deleteHandler} className="trash-btn"
+                onClick = {deleteHandler}
+                className = "trash-btn"
             >
-                <i className="fas fa-trash" />
+                <i className = "fas fa-trash" />
             </button>
         </div>
     );
