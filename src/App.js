@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react';
 import './App.scss';
 
 //Components
-import Input from "./components/Input";
-import Tasks from "./components/Tasks";
+import Input from "./components/Input/Input";
+import Tasks from "./components/Tasks/Tasks";
 
 function App() {
     //States
@@ -55,11 +55,12 @@ function App() {
 
     return (
         <div className="App">
-            <header className="App-header">
-                <h1>ToDo</h1>
+            <header>
+                <h1>Your Tasks</h1>
             </header>
 
             <Input
+                placeholder = "New Task here"
                 tasks = {tasks}
                 setTasks = {setTasks}
                 inputText = {inputText}

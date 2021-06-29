@@ -1,0 +1,30 @@
+@use "../../vars.scss" as *;
+
+.task-form {
+    @include flex-center();
+    position: relative;
+}
+
+.task-button {
+    position: absolute;
+    right: 0;
+}
+
+.button-input {
+    @include input-field($rounding);
+
+    flex-grow: 2;
+}
+
+.input-focus-border {
+    @include input-field-focus-border($rounding + 1, $color-accent-1);
+}
+
+.button-input:focus {
+    background: $color-bg;
+}
+
+.button-input:focus ~ .input-focus-border {
+    height: 50%;
+    width: 100%;
+}

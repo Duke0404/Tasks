@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: 'src/assets/fonts/ProductSans-Medium.ttf';
+  }
+  
+  //Variables
+  $color-bg: aquamarine;
+  $color-accent-1: #0012D7;
+  $color-text-1: #212121;
+  
+  $font: "Product Sans", sans-serif;
+  $font-size: 24px;
+  
+  $rounding: 10px;
+  
+@mixin flex-center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin input-field($rounding) {
+    align-items: center;
+
+    padding: 15px 13px;
+    margin: 2px;
+
+    outline: solid 1px;
+    border-radius: $rounding;
+}
+
+@mixin input-field-focus-border($rounding, $color) {
+    position: absolute;
+
+    background: $color;
+
+    border-radius: $rounding;
+
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 0%;
+    z-index: -1;
+    transition: height 0.3s, width 0.3s 0.1s;
+}
