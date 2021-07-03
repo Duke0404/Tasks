@@ -6,7 +6,8 @@
   }
   
   //Variables
-  $color-bg: aquamarine;
+  $color-bg: #fff;
+  $color-bg-2: #fff;
   $color-accent-1: #0012D7;
   $color-text-1: #212121;
   
@@ -21,13 +22,16 @@
     justify-content: center;
 }
 
-@mixin input-field($rounding) {
+@mixin input-field($rounding, $color) {
     align-items: center;
 
-    padding: 15px 13px;
-    margin: 2px;
+    background: $color;
 
-    outline: solid 1px;
+    padding: 15px 13px;
+    margin: 1px;
+
+    border: solid 1px;
+    outline: none;
     border-radius: $rounding;
 }
 
@@ -39,9 +43,16 @@
     border-radius: $rounding;
 
     bottom: 0;
-    left: 0;
+    left: 50%;
     width: 0%;
     height: 0%;
     z-index: -1;
     transition: height 0.3s, width 0.3s 0.1s;
+    transform: translate(-50%, 0);
+}
+
+@mixin button-lone() {
+    @include flex-center();
+    padding: 8px;
+    border-radius: 50%;
 }

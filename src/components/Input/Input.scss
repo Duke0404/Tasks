@@ -1,30 +1,28 @@
+@use "sass:color";
 @use "../../vars.scss" as *;
 
 .task-form {
     @include flex-center();
     position: relative;
+    width: 80vw;
 }
 
-.task-button {
+.inputButton{
     position: absolute;
-    right: 0;
+    right: 13px;
 }
 
 .button-input {
-    @include input-field($rounding);
+    @include input-field($rounding, $color-bg-2);
 
     flex-grow: 2;
 }
 
-.input-focus-border {
-    @include input-field-focus-border($rounding + 1, $color-accent-1);
-}
-
-.button-input:focus {
-    background: $color-bg;
-}
-
 .button-input:focus ~ .input-focus-border {
-    height: 50%;
+    height: 55%;
     width: 100%;
+}
+
+.input-focus-border {
+    @include input-field-focus-border($rounding + 2px, $color-accent-1);
 }

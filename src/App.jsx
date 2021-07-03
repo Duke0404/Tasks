@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react';
 import './App.scss';
 
 //Components
-import Input from "./components/Input/Input";
-import Tasks from "./components/Tasks/Tasks";
+import Input from "./components/Input/Input.jsx";
+import Tasks from "./components/Tasks/Tasks.jsx";
 
 function App() {
     //States

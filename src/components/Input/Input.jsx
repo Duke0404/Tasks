@@ -1,10 +1,11 @@
 import React from "react";
-
-//Style
 import "./Input.scss"
 
+//Components
+import ButtonLone from "../ButtonLone/ButtonLone.jsx";
+
 //Icons
-import arrow_forward from "../../assets/icons/arrow_forward.svg"
+import ArrowForwardIcon from "../../assets/icons/arrow_forward.svg"
 
 const Input = (props) => {
     const inputTextHandler = (e) => {
@@ -34,12 +35,11 @@ const Input = (props) => {
 
             <div className = "input-focus-border" />
 
-            <button onClick = {submitTaskHandler} className = "task-button" type = "submit">
-                <img
-                    src = {arrow_forward}
-                    alt = "Submit Task"
-                />
-            </button>
+            <ButtonLone
+                classInject = "inputButton"
+                icon = {ArrowForwardIcon}
+                submitTaskHandler = {submitTaskHandler}
+            />
 
             {/* <div className="select">
                 <select onChange = {statusHandler} name = "todos" className = "filter-todo">

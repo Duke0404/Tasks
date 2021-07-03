@@ -1,0 +1,10 @@
+@use "sass:color";
+@use "../../vars.scss" as *;
+
+.buttonLone {
+    @include button-lone();
+}
+
+.buttonLone:hover {
+    background: color.scale($color-accent-1, $lightness: 75%);
+}
