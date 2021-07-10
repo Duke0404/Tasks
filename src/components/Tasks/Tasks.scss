@@ -1,0 +1,9 @@
+@use "../../vars.scss" as *;
+
+.task-list {
+    @include flex-center();
+    list-style-type: none;
+    width: 80vw;
+
+    margin: 10px;
+}

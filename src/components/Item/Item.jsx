@@ -1,39 +1,46 @@
 import React from "react";
 
+//Style
+import "./Item.scss"
+
+//Components
+import ButtonLone from "../ButtonLone/ButtonLone.jsx"
+
+//Icons
+import RadioButtonUncheckedIcon from "../../assets/icons/RadioButtonUncheckedIcon"
+import TaskAltIcon from "../../assets/icons/TaskAltIcon"
+import DeleteForeverIcon from "../../assets/icons/DeleteForeverIcon"
+
 const Item = ({item, text, tasks, setTasks}) => {
     const deleteHandler = () => {
-        setTasks(tasks.filter(el => el.id !== item.id));
+        setTasks(tasks.filter(i => i.id !== item.id));
     }
 
     const completeHandler = () => {
-        setTasks(tasks.map((el) => {
-            if(el.id === item.id)
-                return {...el, completed: !item.completed};
+        setTasks(tasks.map((i) => {
+            if(i.id === item.id)
+                return {...i, completed: !item.completed};
 
-            return el;
+            return i;
         }));
     }
 
     return (
-        <div className = "todo">
-            <li
-                className = {`todo-item ${item.completed ? "completed" : ""}`}
-            >{text}</li>
-
-            <button
-                onClick = {completeHandler}
+        <li className = {`task-item ${item.completed ? "completed" : ""}`}>
+            <ButtonLone
                 className = "complete-btn"
-            >
-                <i className = "fas fa-check" />
-            </button>
+                icon = {item.completed ? <TaskAltIcon /> : <RadioButtonUncheckedIcon/>}
+                click = {completeHandler}
+            />
 
-            <button
-                onClick = {deleteHandler}
+            {text}
+
+            <ButtonLone
                 className = "trash-btn"
-            >
-                <i className = "fas fa-trash" />
-            </button>
-        </div>
+                icon = {<DeleteForeverIcon />}
+                click = {deleteHandler}
+            />
+        </li>
     );
 }
 

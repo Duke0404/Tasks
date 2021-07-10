@@ -14,8 +14,13 @@ h1 {
   font-size: 35pt;
 }
 
-header{
+header {
   @include flex-center();
+  margin: 30px;
+}
+
+.textIcon {
+    color: $color-text-2;
 }
 
 // .todo-container {

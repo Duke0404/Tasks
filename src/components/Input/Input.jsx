@@ -1,27 +1,30 @@
 import React from "react";
+
+//Style
 import "./Input.scss"
 
 //Components
 import ButtonLone from "../ButtonLone/ButtonLone.jsx";
 
 //Icons
-import ArrowForwardIcon from "../../assets/icons/arrow_forward.svg"
+import ArrowForwardIcon from "../../assets/icons/ArrowForwardIcon.jsx"
 
 const Input = (props) => {
     const inputTextHandler = (e) => {
-        console.log(e.target.value );
         props.setInputText(e.target.value);
     }
 
     const submitTaskHandler = (e) => {
         e.preventDefault();
-        props.setTasks([...props.tasks, {text: props.inputText, completed: false, id: Math.random()}]);
-        props.setInputText("");
+        if(props.inputText.length > 0) {
+            props.setTasks([...props.tasks, {text: props.inputText, completed: false, id: Math.random()}]);
+            props.setInputText("");
+        }
     }
 
-    const statusHandler = (e) => {
-        props.setStatus(e.target.value);
-    }
+    // const statusHandler = (e) => {
+    //     props.setStatus(e.target.value);
+    // }
 
     return (
         <form className = "task-form">
@@ -37,8 +40,8 @@ const Input = (props) => {
 
             <ButtonLone
                 classInject = "inputButton"
-                icon = {ArrowForwardIcon}
-                submitTaskHandler = {submitTaskHandler}
+                icon = {<ArrowForwardIcon />}
+                click = {submitTaskHandler}
             />
 
             {/* <div className="select">
@@ -49,6 +52,7 @@ const Input = (props) => {
                 </select>
             </div> */}
         </form>
+        
     );
 }
 

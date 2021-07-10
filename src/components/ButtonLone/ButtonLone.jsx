@@ -1,10 +1,10 @@
 import React from "react";
-import "./ButtonLone.scss"
+import "./ButtonLone.scss";
 
 const ButtonLone = (props) => {
     return (
         <button
-            onClick = {props.submitTaskHandler}
+            onClickCapture = {props.click}
             className = {`buttonLone + ${props.classInject}`}
             type = "submit"
         >

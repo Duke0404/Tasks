@@ -1,0 +1,16 @@
+@use "../../vars.scss" as *;
+@use "../../assets/shadows/MaterialShadows.scss" as shadow;
+
+.task-item {
+    background: $color-bg;
+
+    @include flex-left();
+    width: 100%;
+
+    padding: 10px 7px;
+    gap: 7px 0;
+
+    border-radius: $rounding;
+
+    @include shadow.shadow-2dp()
+}

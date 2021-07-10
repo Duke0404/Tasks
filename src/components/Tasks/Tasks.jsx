@@ -1,12 +1,15 @@
 import React from "react";
 
+//Style
+import "./Tasks.scss"
+
 //Components
 import Item from "../Item/Item";
 
 const Tasks = ({tasks, setTasks, filteredTasks}) => {
     return (
         <div className="todo-container">
-            <ul className="todo-list">
+            <ul className="task-list">
                 {filteredTasks.map(item => (
                     <Item
                         setTasks={setTasks}

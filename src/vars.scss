@@ -10,6 +10,7 @@
   $color-bg-2: #fff;
   $color-accent-1: #0012D7;
   $color-text-1: #212121;
+  $color-text-2: #757575;
   
   $font: "Product Sans", sans-serif;
   $font-size: 24px;
@@ -22,15 +23,19 @@
     justify-content: center;
 }
 
+@mixin flex-left() {
+    @include flex-center();
+    justify-content: flex-start;
+}
+
 @mixin input-field($rounding, $color) {
     align-items: center;
 
     background: $color;
 
     padding: 15px 13px;
-    margin: 1px;
+    margin-bottom: 3px;
 
-    border: solid 1px;
     outline: none;
     border-radius: $rounding;
 }
@@ -40,7 +45,7 @@
 
     background: $color;
 
-    border-radius: $rounding;
+    border-radius: 0 0 $rounding $rounding;
 
     bottom: 0;
     left: 50%;
@@ -51,8 +56,3 @@
     transform: translate(-50%, 0);
 }
 
-@mixin button-lone() {
-    @include flex-center();
-    padding: 8px;
-    border-radius: 50%;
-}

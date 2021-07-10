@@ -60,7 +60,7 @@ function App() {
             </header>
 
             <Input
-                placeholder = "New Task here"
+                placeholder = "Enter a New Task"
                 tasks = {tasks}
                 setTasks = {setTasks}
                 inputText = {inputText}
