@@ -4,15 +4,6 @@
     font-weight: 400;
     src: 'src/assets/fonts/ProductSans-Medium.ttf';
   }
-  
-  //Variables
-  @media (prefers-color-scheme: light) {
-    $color-bg: #fff !global;
-    $color-bg-2: #fff !global;
-    $color-accent-1: #0012D7 !global;
-    $color-text-1: #212121 !global;
-    $color-text-2: #757575 !global;
-  }
 
   @media (prefers-color-scheme: dark) {
     $color-bg: #212121 !global;
@@ -20,6 +11,15 @@
     $color-accent-1: #0012D7 !global;
     $color-text-1: #fff !global;
     $color-text-2: #bbb !global;
+  }
+
+  //Variables
+  @media (prefers-color-scheme: light) {
+    $color-bg: #fff !global;
+    $color-bg-2: #fff !global;
+    $color-accent-1: #0012D7 !global;
+    $color-text-1: #212121 !global;
+    $color-text-2: #757575 !global;
   }
   
   $font: "Product Sans", sans-serif;
