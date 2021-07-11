@@ -26,7 +26,7 @@ const Item = ({item, text, tasks, setTasks}) => {
     }
 
     return (
-        <li className = {`task-item ${item.completed ? "completed" : ""}`}>
+        <li className = {`task-item ${item.completed ? "completed-item" : ""}`}>
             <ButtonLone
                 className = "complete-btn"
                 icon = {item.completed ? <TaskAltIcon /> : <RadioButtonUncheckedIcon/>}

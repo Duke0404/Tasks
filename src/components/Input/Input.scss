@@ -15,9 +15,14 @@
 }
 
 .button-input {
-    @include input-field($rounding, $color-bg-2);
+    @include input-field($rounding, $color-bg);
 
     width: 100%;
+}
+
+.button-input::placeholder {
+    color:  $color-text-1;
+    opacity: 1;
 }
 
 .button-input:focus ~ .input-focus-border {

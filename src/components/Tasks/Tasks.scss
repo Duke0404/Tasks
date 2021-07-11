@@ -2,8 +2,10 @@
 
 .task-list {
     @include flex-center();
+    flex-direction: column;
     list-style-type: none;
     width: 80vw;
 
     margin: 10px;
+    gap: 7px
 }

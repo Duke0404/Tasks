@@ -10,7 +10,7 @@ const Tasks = ({tasks, setTasks, filteredTasks}) => {
     return (
         <div className="todo-container">
             <ul className="task-list">
-                {filteredTasks.map(item => (
+                {tasks.map(item => (
                     <Item
                         setTasks={setTasks}
                         tasks={tasks}

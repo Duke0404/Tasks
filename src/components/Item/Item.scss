@@ -2,7 +2,7 @@
 @use "../../assets/shadows/MaterialShadows.scss" as shadow;
 
 .task-item {
-    background: $color-bg;
+    background: $color-bg-2;
 
     @include flex-left();
     width: 100%;
@@ -13,4 +13,15 @@
     border-radius: $rounding;
 
     @include shadow.shadow-2dp()
+}
+
+.completed-item {
+    background: $color-bg;
+    color: $color-text-2;
+
+    box-shadow: none;
+}
+
+.completed-item svg {
+    fill: $color-text-2;
 }
