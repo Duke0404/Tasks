@@ -1,5 +1,3 @@
-import React from "react";
-
 //Style
 import "./Item.scss"
 
@@ -13,16 +11,16 @@ import DeleteForeverIcon from "../../assets/icons/DeleteForeverIcon"
 
 const Item = ({item, text, tasks, setTasks}) => {
     const deleteHandler = () => {
-        setTasks(tasks.filter(i => i.id !== item.id));
+        setTasks(tasks.filter(i => i.id !== item.id))
     }
 
     const completeHandler = () => {
-        setTasks(tasks.map((i) => {
+        setTasks(tasks.map(i => {
             if(i.id === item.id)
-                return {...i, completed: !item.completed};
+                return {...i, completed: !item.completed}
 
-            return i;
-        }));
+            return i
+        }))
     }
 
     return (
@@ -44,4 +42,4 @@ const Item = ({item, text, tasks, setTasks}) => {
     );
 }
 
-export default Item;
+export default Item

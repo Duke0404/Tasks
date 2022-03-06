@@ -1,24 +1,22 @@
-import React from "react";
-
 //Style
 import "./Input.scss"
 
 //Components
-import ButtonLone from "../ButtonLone/ButtonLone.jsx";
+import ButtonLone from "../ButtonLone/ButtonLone.jsx"
 
 //Icons
 import ArrowForwardIcon from "../../assets/icons/ArrowForwardIcon.jsx"
 
-const Input = (props) => {
-    const inputTextHandler = (e) => {
-        props.setInputText(e.target.value);
+const Input = props => {
+    const inputTextHandler = e => {
+        props.setInputText(e.target.value)
     }
 
-    const submitTaskHandler = (e) => {
-        e.preventDefault();
+    const submitTaskHandler = e => {
+        e.preventDefault()
         if(props.inputText.length > 0) {
-            props.setTasks([...props.tasks, {text: props.inputText, completed: false, id: Math.random()}]);
-            props.setInputText("");
+            props.setTasks([...props.tasks, {text: props.inputText, completed: false, id: Math.random()}])
+            props.setInputText("")
         }
     }
 
@@ -53,7 +51,7 @@ const Input = (props) => {
             </div> */}
         </form>
         
-    );
+    )
 }
 
-export default Input;
+export default Input

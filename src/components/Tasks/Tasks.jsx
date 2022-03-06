@@ -1,12 +1,10 @@
-import React from "react";
-
 //Style
 import "./Tasks.scss"
 
 //Components
-import Item from "../Item/Item";
+import Item from "../Item/Item"
 
-const Tasks = ({tasks, setTasks, filteredTasks}) => {
+const Tasks = ({tasks, setTasks/*, filteredTasks*/}) => {
     return (
         <div className="todo-container">
             <ul className="task-list">
@@ -21,7 +19,7 @@ const Tasks = ({tasks, setTasks, filteredTasks}) => {
                 ))}
             </ul>
         </div>
-    );
+    )
 }
 
-export default Tasks;
+export default Tasks

@@ -1,14 +1,15 @@
-import React, {useState, useEffect} from 'react';
-import './App.scss';
+import {useState, useEffect} from 'react'
+
+import './App.scss'
 
 //Components
-import Input from "./components/Input/Input.jsx";
-import Tasks from "./components/Tasks/Tasks.jsx";
+import Input from "../Input/Input.jsx";
+import Tasks from "../Tasks/Tasks.jsx";
 
-function App() {
+const App = () => {
     //States
-    const [inputText, setInputText] = useState("");
-    const [tasks, setTasks] = useState([]);
+    const [inputText, setInputText] = useState("")
+    const [tasks, setTasks] = useState([])
     //const [status, setStatus] = useState("all");
     //const [filteredTasks, setFilteredTasks] = useState([]);
 
